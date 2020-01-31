@@ -14,7 +14,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1WzYg2VOkZ0gkdQsXYonB0vWqpM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -34,7 +38,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Agent 47\Desktop\mokslai\vue\daviva-front\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -60,6 +64,7 @@
       <updated>1580153997132</updated>
       <workItem from="1580153998819" duration="646000" />
       <workItem from="1580155320205" duration="17646000" />
+      <workItem from="1580386770480" duration="6930000" />
     </task>
     <servers />
   </component>
@@ -71,9 +76,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1580239146443" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1580154052180">
+    <state x="275" y="22" key="#Notifications" timestamp="1580426039727">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1580154052180" />
+    <state x="275" y="22" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1580426039727" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1580426028968">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1580426028968" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1580426032621">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1580426032621" />
   </component>
 </project>
