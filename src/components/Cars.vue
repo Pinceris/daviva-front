@@ -55,12 +55,12 @@
                 this.infoList.push(car);
             },
             changePicture(index, next, info) {
-                if(next === true && this.counters[index] < 3)
+                if(next === true && this.counters[index] < info.nuotraukos.length-1)
                 {
                     this.counters[index]++;
                     info.nuotrauka = info.nuotraukos[this.counters[index]];
                 }
-                else if(this.counters[index] > 0)
+                else if(this.counters[index] > 0 && next === false)
                 {
                     this.counters[index]--;
                     info.nuotrauka = info.nuotraukos[this.counters[index]];
