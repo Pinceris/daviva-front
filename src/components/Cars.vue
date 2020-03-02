@@ -12,6 +12,7 @@
                 <a class="kaina">Kaina: {{info.kaina}}€</a>
             </div>
             <button class="arrow left" v-on:click="changePicture(index,false, info)">&#8249;</button>
+            <button :class="{'highlight':info.saved}" v-on:click="savePost(info)"><font-awesome-icon icon="heart" /></button>
             <button class="arrow right" v-on:click="changePicture(index,true, info)">&#8250;</button>
         </div>
         </section>
@@ -51,20 +52,48 @@
                     nuotraukos: info.nuotraukos,
                     nuotrauka: info.nuotraukos[0],
                     kaina: info.kaina,
+                    saved: false,
                 };
                 this.infoList.push(car);
             },
             changePicture(index, next, info) {
-                if(next === true && this.counters[index] < info.nuotraukos.length-1)
-                {
+                if (next === true && this.counters[index] < info.nuotraukos.length - 1) {
                     this.counters[index]++;
                     info.nuotrauka = info.nuotraukos[this.counters[index]];
-                }
-                else if(this.counters[index] > 0 && next === false)
-                {
+                } else if (this.counters[index] > 0 && next === false) {
                     this.counters[index]--;
                     info.nuotrauka = info.nuotraukos[this.counters[index]];
                 }
+            },
+            savePost(info){
+                let list = [];
+                if(localStorage.getItem('saved'))
+                {
+                    list = JSON.parse(localStorage.getItem('saved'));
+                }
+                if(!info.saved)
+                {
+                    info.saved = true;
+                    list.push(info);
+                }
+                else
+                {
+                    list.forEach((value, index) => {
+                        if(value.marke === info.marke && value.modelis === info.modelis && value.metai === info.metai)
+                        {
+                            list.splice(index, 1);
+                            info.saved = false;
+                        }
+                    });
+                }
+                const parsed = JSON.stringify(list);
+                localStorage.setItem('saved', parsed);
+            }
+        },
+        mounted() {
+            if(localStorage.getItem('saved'))
+            {
+                this.infoList = JSON.parse(localStorage.getItem('saved'));
             }
         }
     }
@@ -123,5 +152,9 @@
         border: none;
         cursor: pointer;
         border-radius: 5px;
+    }
+
+    .highlight {
+        background-color: crimson;
     }
 </style>
